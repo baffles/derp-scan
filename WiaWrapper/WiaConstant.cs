@@ -7,13 +7,6 @@ namespace DerpScan.WiaWrapper
 {
 	public enum WiaConstant : uint
 	{
-		//(((unsigned long)(sev)<<31) | ((unsigned long)(fac)<<16) | ((unsigned long)(code)))
-		/*#define STATUS_SEVERITY_WARNING          0x2
-		#define STATUS_SEVERITY_SUCCESS          0x0
-		#define STATUS_SEVERITY_INFORMATIONAL    0x1
-		#define STATUS_SEVERITY_ERROR            0x3*/
-		// facility is 33, which is 100001, or 21 in hex.
-		//               ERRWIAxxx
 		WIA_ERROR_GENERAL_ERROR = 0x80210001,
 		WIA_ERROR_PAPER_JAM = 0x80210002,
 		WIA_ERROR_PAPER_EMPTY = 0x80210003,

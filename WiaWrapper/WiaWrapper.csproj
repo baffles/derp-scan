@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,6 +46,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WiaConstant.cs" />
     <Compile Include="Exceptions\WiaException.cs" />
+    <Compile Include="WiaPropertyMap.cs" />
+    <Compile Include="WiaImageFormat.cs" />
     <Compile Include="WiaProperty.cs" />
   </ItemGroup>
   <ItemGroup>

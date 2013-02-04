@@ -25,6 +25,8 @@ namespace WIATest
 				{
 					MessageBox.Show("got dev");
 					MessageBox.Show(d.DeviceName);
+
+					pictureBox1.Image = d.Scan();
 				}
 				else
 					MessageBox.Show("no selection");
