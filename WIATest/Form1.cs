@@ -24,7 +24,7 @@ namespace WIATest
 				if (d != null)
 				{
 					MessageBox.Show("got dev");
-					MessageBox.Show(d.GetProperty(DerpScan.WiaWrapper.WiaProperty.WIA_DIP_DEV_NAME).ToString());
+					MessageBox.Show(d.DeviceName);
 				}
 				else
 					MessageBox.Show("no selection");

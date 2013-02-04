@@ -8,9 +8,12 @@ namespace DerpScan.WiaWrapper
 {
 	public class WiaDevice
 	{
-		public string DeviceID { get { return device.DeviceID; } }
-
 		private WIA.Device device;
+
+		#region Properties
+		public string DeviceID { get { return device.DeviceID; } }
+		public string DeviceName { get { return GetProperty(WiaProperty.WIA_DIP_DEV_NAME).ToString(); } }
+		#endregion
 
 		#region Constructor/Acquire methods
 		public WiaDevice(WIA.Device device)
@@ -55,12 +58,12 @@ namespace DerpScan.WiaWrapper
 		}
 		#endregion
 
-		public object GetProperty(WiaProperty property)
+		internal object GetProperty(WiaProperty property)
 		{
 			return device.Properties.Cast<WIA.Property>().Single(prop => prop.PropertyID == (int)property).get_Value();
 		}
 
-		public void SetProperty(WiaProperty property, object value)
+		internal void SetProperty(WiaProperty property, object value)
 		{
 			device.Properties.Cast<WIA.Property>().Single(prop => prop.PropertyID == (int)property).set_Value(value);
 		}
